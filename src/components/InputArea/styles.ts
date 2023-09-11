@@ -24,25 +24,30 @@ export const Input = styled.input`
     border: 1px solid lightblue;
     border-radius: 5px;
 `;
-// export const Select = styled.select`
-//     width: 100%;
-//     height: 30px;
-//     padding: 0 5px;
-//     border: 1px solid lightblue;
-//     border-radius: 5px;
-// `;
+
 export const Button = styled.button`
-    width: 100%;
-    height: 30px;
-    padding: 0 5px;
-    border: 1px solid lightblue;
-    border-radius: 5px;
-    background-color: lightblue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a09be0;
     color: black;
     cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o ícone verticalmente e horizontalmente */
+    font-size: 24px; /* Tamanho do ícone */
+    margin-left: auto;
+   
 
     &:hover {
-        background-color: blue;
+        background-color: #6d68b7;
         color: white;
     }
+`;
+
+export const LargeInput = styled(Input)`
+    /* Estilos adicionais para o campo de descrição */
+    height: 30px; /* Tamanho maior para o campo de descrição */
+    width: 180%;
 `;

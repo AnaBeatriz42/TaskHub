@@ -1,6 +1,7 @@
 export type Item = {
-    title: string;
+    titulo: string;
     descricao: string;
-    estado:string
+    usuario : string
+    status : string
 }
 
