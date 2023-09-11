@@ -29,21 +29,21 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-     width: auto; /* Largura automática com base no conteúdo */
-     height: 40px; /* Altura do botão */
-     border-radius: 20px; /* Bordas laterais arredondadas */
-     background-color: #a09be0; /* Cor roxa clara */
+     width: auto; 
+     height: 40px; 
+     border-radius: 20px; 
+     background-color: #a09be0; 
      color: black;
      cursor: pointer;
      border: none;
      display: flex;
      align-items: center;
-     justify-content: center; /* Centraliza o texto verticalmente e horizontalmente */
-     font-size: 16px; /* Tamanho do texto */
-     padding: 0 20px; /* Espaçamento interno (horizontal) para maior largura */
+     justify-content: center; 
+     font-size: 16px;
+     padding: 0 20px; 
 
      &:hover {
-     background-color: #6d68b7; /* Cor roxa escura ao passar o mouse */
+     background-color: #6d68b7; 
      color: white;
      }
 `;

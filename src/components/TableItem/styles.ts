@@ -33,13 +33,13 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 100px; 
+   width: 100px; 
   height: 30px;
   background-color: #a09be0;
   color: black;
   cursor: pointer;
   border: none;
-  border-radius: 25px; /* Bordas mais arredondadas para criar um botão cilíndrico */
+  border-radius: 25px; 
   display: flex;
   align-items: center;
   justify-content: center;

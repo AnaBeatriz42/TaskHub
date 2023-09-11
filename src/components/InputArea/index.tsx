@@ -20,19 +20,30 @@ export const InputArea = ({ onAdd }: Props) => {
     } else if (descriptionField === '') {
       alert('Descrição vazia!');
     } else {
+
+      const idUser = localStorage.getItem('usuario')as string;
       const newItem: Item = {
         titulo: titleField,
         descricao: descriptionField,
-        usuario: "64fc8a070fc0a4d654656554",
+        usuario: idUser,
         status: "nao_iniciada"
       };
       console.log(newItem);
 
-      axios.post('http://localhost:3001/api/tasks', newItem)
+      const token = localStorage.getItem('token');
+      const config = {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json' 
+        }
+      };
+
+      axios.post('http://localhost:3001/api/tasks', newItem, config)
         .then((response) => {
           console.log('Dados enviados com sucesso para o backend:', response.data);
           onAdd(newItem);
           clearFields();
+          window.location.reload();
         })
         .catch((error) => {
           console.error('Erro ao enviar dados para o backend:', error);

@@ -1,14 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as C from './styles';
 import axios from 'axios';
 
+
 type AuthProps = {
-     onLoginSuccess: () => void; 
+     onLoginSuccess: () => void;
 };
 
 export const Auth = ({ onLoginSuccess }: AuthProps) => {
      const [email, setEmail] = useState('');
      const [password, setPassword] = useState('');
+
+     useEffect(() => {
+          const token = localStorage.getItem('token');
+          if (token) {
+               onLoginSuccess();
+          }
+     }, []);
 
      const handleLogin = () => {
           if (!email || !password) {
@@ -28,7 +36,7 @@ export const Auth = ({ onLoginSuccess }: AuthProps) => {
           axios.post('http://localhost:3001/api/user/login', data)
                .then((response) => {
                     console.log('Dados enviados com sucesso para o backend:', response.data);
-                    localStorage.setItem('tokem', response.data.accessToken);
+                    localStorage.setItem('token', response.data.accessToken);
                     localStorage.setItem('usuario', response.data.id);
                     onLoginSuccess();
                })

@@ -5,7 +5,7 @@ export const Container = styled.div`
     box-shadow: 0px 0px 5px #CCC;
     border-radius: 10px;
     padding: 30px;
-    margin-top: -40px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
 `;
@@ -35,8 +35,8 @@ export const Button = styled.button`
     border: none;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o ícone verticalmente e horizontalmente */
-    font-size: 24px; /* Tamanho do ícone */
+    justify-content: center;
+    font-size: 24px; 
     margin-left: auto;
    
 
@@ -47,7 +47,6 @@ export const Button = styled.button`
 `;
 
 export const LargeInput = styled(Input)`
-    /* Estilos adicionais para o campo de descrição */
-    height: 30px; /* Tamanho maior para o campo de descrição */
+    height: 30px;
     width: 180%;
 `;
