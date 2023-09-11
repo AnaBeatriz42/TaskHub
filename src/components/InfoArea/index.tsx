@@ -26,7 +26,7 @@ export const InfoArea = ({ title, totalTasks, onStatusChange }: Props) => {
 
   return (
     <C.Container>
-      <C.Title>{title}</C.Title>
+      {/* <C.Title>{title}</C.Title> */}
       <C.StatusSelector>
         <label htmlFor="statusSelector">Filtrar por Status:</label>
         <Select
@@ -37,7 +37,7 @@ export const InfoArea = ({ title, totalTasks, onStatusChange }: Props) => {
           placeholder="Selecione o status"
         />
       </C.StatusSelector>
-      <C.TotalTasks>Total Tasks: {totalTasks}</C.TotalTasks>
+      {/* <C.TotalTasks>Total Tasks: {totalTasks}</C.TotalTasks> */}
     </C.Container>
   );
 };

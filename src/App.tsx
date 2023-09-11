@@ -34,7 +34,7 @@ const App = () => {
       <C.Body>
         {isAuthenticated ? (
           <>
-            <InfoArea title="Minhas tasks:" totalTasks={totalTasks} onStatusChange={setSelectedStatus} /> 
+            <InfoArea  totalTasks={totalTasks} onStatusChange={setSelectedStatus} /> 
             <InputArea onAdd={handleAddItem} />
             <TableArea list={list} onUpdateSuccess={handleAuthSuccess}  selectedStatus={selectedStatus}  />
           </>
